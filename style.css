@@ -1,0 +1,98 @@
+body{
+    margin:0;
+}
+@font-face {
+    src: url(fonts/Burford_Base.ttf);
+    font-family: cool;
+}
+
+section{
+    width: 100vw;
+    height: 100vh;
+    background-image: url(images/pexels-fwstudio-129731.jpg);
+    background-size: cover;
+}
+
+#navbar{
+    display: flex;
+    justify-content:space-around;
+    align-items:center ;
+    width: 890px;
+}
+#a{
+    
+    font-family: cool;
+    font-size: 60px;
+    margin: 0px;
+    color: #2E0FA3;
+    letter-spacing: -0.1em;
+
+}
+.gameCounter{
+    border-radius: 5px;
+    height:50px;
+    width: 100px;
+    background-color: rgba(255,255,255,.5);
+    padding-left: 3px;
+}
+
+#score-text{
+    margin: 0px; 
+    padding: 0px;
+    border-bottom: 1px solid rgba(0,0,0,.5);
+    display: inline-block;
+    
+}
+#restart{
+    font-family: cool;
+    background-color: transparent;
+    font-size: 30px;
+    width: 103px;
+    height: 50px;
+    border-radius: 5px;
+    border:none;
+    color:#2E0FA3;
+    font-weight: bold;
+}
+#rounds{
+    color: #2E0FA3;
+    font-family: cool;
+    font-size: 37px;
+    margin-bottom: 10px;  
+    padding-left: 15px;
+    padding-bottom: 10px;
+}
+
+
+#container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+#card-container{
+    height: 60vh;
+    width: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.cardClass{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    height:240px;
+    width: 189px;
+    border-radius: 14px;
+    background-image: url(images/Mask-Group.png);
+    background-size: cover;
+    font-family: cool;
+    color: lavender;
+    font-size: 40px;
+    box-shadow: lightgray;
+}
