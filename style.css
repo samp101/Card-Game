@@ -6,14 +6,9 @@ body{
     font-family: cool;
 }
 
-#container{
+section{
     width: 100vw;
     height: 100vh;
-
-}
-section{
-    width: 100%;
-    height: 100%;
     background-image: url(images/pexels-fwstudio-129731.jpg);
     background-size: cover;
 }
