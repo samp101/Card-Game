@@ -1,5 +1,6 @@
 body{
-    margin:0;
+    margin:0px;
+    padding: 0px;
 }
 @font-face {
     src: url(fonts/Burford_Base.ttf);
@@ -7,22 +8,26 @@ body{
 }
 
 section{
-    width: 100vw;
-    height: 100vh;
-    background-image: url(images/pexels-fwstudio-129731.jpg);
+    /* min-width: 600px; */
+    /* width: 100vw; */
+    /* height: 100vh; */
+    /* background-image: url(images/pexels-fwstudio-129731.jpg); */
     background-size: cover;
 }
 
 #navbar{
+
     display: flex;
     justify-content:space-around;
+    flex-wrap: wrap;
     align-items:center ;
-    width: 890px;
+    margin:10px;
+    width: 80%;
 }
 #a{
     
     font-family: cool;
-    font-size: 60px;
+    font-size: 2rem;
     margin: 0px;
     color: #2E0FA3;
     letter-spacing: -0.1em;
@@ -33,7 +38,7 @@ section{
     height:50px;
     width: 100px;
     background-color: rgba(255,255,255,.5);
-    padding-left: 3px;
+    padding: 5px;
 }
 
 #score-text{
@@ -65,16 +70,19 @@ section{
 
 
 #container{
+    min-height: 100vh;
+
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    background-image: url(images/pexels-fwstudio-129731.jpg);
+
     
 }
 
 #card-container{
-    height: 60vh;
-    width: 1000px;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -86,8 +94,8 @@ section{
     justify-content: center;
     align-items: center;
     margin: 10px;
-    height:240px;
-    width: 189px;
+    height:20vh;
+    width: 40vw;
     border-radius: 14px;
     background-image: url(images/Mask-Group.png);
     background-size: cover;
