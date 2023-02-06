@@ -8,30 +8,35 @@ body{
 }
 
 section{
-    /* min-width: 600px; */
-    /* width: 100vw; */
-    /* height: 100vh; */
-    /* background-image: url(images/pexels-fwstudio-129731.jpg); */
+    width: 100vw;
+    background-image: url(images/pexels-fwstudio-129731.jpg);
     background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x:hidden;
 }
 
 #navbar{
-
     display: flex;
     justify-content:space-around;
     flex-wrap: wrap;
     align-items:center ;
-    margin:10px;
+    margin-bottom: 50px;
     width: 80%;
 }
-#a{
+#header{
     
     font-family: cool;
     font-size: 2rem;
-    margin: 0px;
     color: #2E0FA3;
     letter-spacing: -0.1em;
 
+}
+.game-counter-countainer{
+    display: flex;
+    justify-content: space-around;
+    width:100%;
 }
 .gameCounter{
     border-radius: 5px;
@@ -40,24 +45,26 @@ section{
     background-color: rgba(255,255,255,.5);
     padding: 5px;
 }
+#score{
+    border-bottom: 1px solid rgba(0,0,0,.5);
 
+}
 #score-text{
     margin: 0px; 
     padding: 0px;
-    border-bottom: 1px solid rgba(0,0,0,.5);
     display: inline-block;
     
 }
+
 #restart{
     font-family: cool;
     background-color: transparent;
-    font-size: 30px;
     width: 103px;
     height: 50px;
-    border-radius: 5px;
     border:none;
     color:#2E0FA3;
-    font-weight: bold;
+    font-size: 2rem;
+
 }
 #rounds{
     color: #2E0FA3;
@@ -71,14 +78,15 @@ section{
 
 #container{
     min-height: 100vh;
-
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-image: url(images/pexels-fwstudio-129731.jpg);
+    overflow-x:hidden;
 
-    
+    /* background-image: url(images/pexels-fwstudio-129731.jpg);    */
+    /* background-repeat: ; */
+     
 }
 
 #card-container{
@@ -87,6 +95,7 @@ section{
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    margin-bottom: 100px;
 }
 
 .cardClass{
@@ -95,12 +104,64 @@ section{
     align-items: center;
     margin: 10px;
     height:20vh;
-    width: 40vw;
+    width: 42vw;
     border-radius: 14px;
     background-image: url(images/Mask-Group.png);
     background-size: cover;
     font-family: cool;
     color: lavender;
-    font-size: 40px;
+    font-size: 2rem;
     box-shadow: lightgray;
+}
+
+@media  all and (min-width: 425px){
+  
+    .cardClass{
+        height: 25vh;
+    }
+    #header{
+        font-size: 2.7rem;
+    }
+}
+@media all and (min-width: 768px){
+    #header{
+        font-family: cool;
+        font-size: 60px;
+        color: #2E0FA3;
+        letter-spacing: -0.1em;
+    }
+    
+.cardClass{
+    
+    margin: 10px;
+    height: 240px;
+    width: 189px;
+    border-radius: 14px;
+    background-image: url(images/Mask-Group.png);
+    background-size: cover;
+    font-family: cool;
+    color: lavender;
+    font-size: 2rem;
+    box-shadow: lightgray;
+}
+}
+@media all and (min-width: 1024px){
+    #container{
+        max-width: 90%;
+    }
+    #navbar{
+    display: flex;
+    justify-content:space-around;
+    flex-wrap: unset;
+    align-items:center;
+    margin-bottom: unset;
+    }
+    .game-counter-countainer{
+        display: flex;
+        justify-content: space-around;
+        width: 30%;
+    }
+    #card-container{
+        max-width: 1000px;
+    }
 }
