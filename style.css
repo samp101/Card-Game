@@ -8,7 +8,7 @@ body{
 }
 
 section{
-    width: 100vw;
+    /* width: 100vw; */
     background-image: url(images/pexels-fwstudio-129731.jpg);
     background-size: cover;
     display: flex;
@@ -41,9 +41,10 @@ section{
 .gameCounter{
     border-radius: 5px;
     height:50px;
-    width: 100px;
+    min-width: 100px;
+    max-width: 105px;
     background-color: rgba(255,255,255,.5);
-    padding: 5px;
+    padding: 13px;
 }
 #score{
     border-bottom: 1px solid rgba(0,0,0,.5);
@@ -115,7 +116,6 @@ section{
 }
 
 @media  all and (min-width: 425px){
-  
     .cardClass{
         height: 25vh;
     }
@@ -131,18 +131,18 @@ section{
         letter-spacing: -0.1em;
     }
     
-.cardClass{
+    .cardClass{
     
-    margin: 10px;
-    height: 240px;
-    width: 189px;
-    border-radius: 14px;
-    background-image: url(images/Mask-Group.png);
-    background-size: cover;
-    font-family: cool;
-    color: lavender;
-    font-size: 2rem;
-    box-shadow: lightgray;
+        margin: 10px;
+        height: 240px;
+        width: 189px;
+        border-radius: 14px;
+        background-image: url(images/Mask-Group.png);
+        background-size: cover;
+        font-family: cool;
+        color: lavender;
+        font-size: 2rem;
+        box-shadow: lightgray;
 }
 }
 @media all and (min-width: 1024px){
