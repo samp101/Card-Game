@@ -1,3 +1,5 @@
+let cardContainer = document.querySelector("#card-container")
+let allCardsArray = Array.from(cardContainer.children)
 let cardPicked1 = undefined
 let cardPicked2 = undefined
 let picked = undefined
@@ -7,7 +9,7 @@ let rounds = document.querySelector("#rounds")
 let button = document.querySelector("button")
 
 button.addEventListener("click",()=>{
-   window.location.reload()
+    restart()
 })
 
 rounds.innerHTML = gameCounter
@@ -18,10 +20,12 @@ div.dataset.picked = "picked"
 
 div.addEventListener("click",checker)
 
-function checker(e){
+sort()
 
+function checker(e){
+    
     if(gameCounter==4||e.target.dataset.picked=="picked"){
-        return
+        return 
     }
     if (cardPicked1==undefined){
     e.target.textContent = e.target.dataset.card
@@ -40,7 +44,10 @@ function checker(e){
             gameCounter = (gameCounter + 1)
             rounds.innerHTML = gameCounter 
             if(gameCounter == 4){
-                gameCounter.innerHTML = gameCounter+ " You got all the pairs!!"
+                setTimeout(()=>{
+                    alert('YOU WON!!!!!! You got all the pairs!!')
+                    userInputPlayAgain()
+                    ,10000})
             }
            return}
         else{ setTimeout(function (){    
@@ -53,7 +60,32 @@ function checker(e){
 },500)
 }}}
 
+function sort() {
+    console.log('I have been called');
+    // After converting node list to an array I can now create a shuffle and then insert them
+    allCardsArray.sort( () => Math.random()-0.5)
+    
+    // Reinserting them into the dom
+    allCardsArray.forEach(element => {
+        cardContainer.append(element)
+    });
+}
 
+const clearCardsText = ()=>{
+        allCardsArray.forEach(div=>{
+            div.innerHTML = '';
+            div.dataset.picked = '';
+            gameCounter = 0
+            rounds.innerHTML = gameCounter 
 
-
+        })
+    }
+const userInputPlayAgain = () =>{
+    let userInput = confirm('Do you want to play again')
+    userInput? restart() : alert('Thanks for playing')
+}
+const restart = () =>{
+    clearCardsText()
+    sort()
+}
 
