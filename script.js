@@ -20,7 +20,6 @@ div.dataset.picked = "picked"
 
 div.addEventListener("click",checker)
 
-sort()
 
 function checker(e){
     
@@ -89,3 +88,4 @@ const restart = () =>{
     sort()
 }
 
+sort()
