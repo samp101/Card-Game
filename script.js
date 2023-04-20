@@ -5,6 +5,9 @@ let cardPicked2 = undefined
 let picked = undefined
 let gameCounter = 0
 
+const jsConfetti = new JSConfetti()
+
+
 let rounds = document.querySelector("#rounds")
 let button = document.querySelector("button")
 
@@ -23,11 +26,11 @@ div.addEventListener("click",checker)
 sort()
 
 function checker(e){
-    
     if(gameCounter==4||e.target.dataset.picked=="picked"){
         return 
     }
     if (cardPicked1==undefined){
+        
     e.target.textContent = e.target.dataset.card
     e.target.dataset.picked = "picked"
     return cardPicked1 = e.target
@@ -43,16 +46,14 @@ function checker(e){
             cardPicked2=undefined
             gameCounter = (gameCounter + 1)
             rounds.innerHTML = gameCounter 
-            if(gameCounter == 4){
-                setTimeout(()=>{
-                    alert('YOU WON!!!!!! You got all the pairs!!')
-                    userInputPlayAgain()
-                    ,10000})
+            if(gameCounter == 1){
+                setTimeout(BabyBoyConfetti(),1000)    
+                .then(setInterval(BabyBoyConfetti,3000))
             }
            return}
         else{ setTimeout(function (){    
-            cardPicked1.textContent = ""
-            cardPicked2.textContent  = ""
+            cardPicked1.textContent = '?'
+            cardPicked2.textContent  = '?'
             cardPicked1.dataset.picked = ""
             cardPicked2.dataset.picked = ""
             cardPicked1=undefined
@@ -63,7 +64,7 @@ function checker(e){
 function sort() {
     console.log('I have been called');
     // After converting node list to an array I can now create a shuffle and then insert them
-    allCardsArray.sort( () => Math.random()-0.5)
+    allCardsArray.sort(() => Math.random()-0.5)
     
     // Reinserting them into the dom
     allCardsArray.forEach(element => {
@@ -73,7 +74,7 @@ function sort() {
 
 const clearCardsText = ()=>{
         allCardsArray.forEach(div=>{
-            div.innerHTML = '';
+            div.innerHTML = '?';
             div.dataset.picked = '';
             gameCounter = 0
             rounds.innerHTML = gameCounter 
@@ -87,5 +88,11 @@ const userInputPlayAgain = () =>{
 const restart = () =>{
     clearCardsText()
     sort()
+}
+const BabyBoyConfetti = () =>{
+     return jsConfetti.addConfetti({  
+        confettiNumber: 500,
+        emojis: ['👶','💙']
+    })    
 }
 

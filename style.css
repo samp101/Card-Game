@@ -9,8 +9,8 @@ body{
 
 section{
     /* width: 100vw; */
-    background-image: url(images/pexels-fwstudio-129731.jpg);
-    background-size: cover;
+    
+    background: linear-gradient(to right bottom, #CEF4FF 50%, #f6ceee 50%);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -103,15 +103,15 @@ section{
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
     margin: 10px;
     height:20vh;
     width: 42vw;
     border-radius: 14px;
-    background-image: url(images/Mask-Group.png);
-    background-size: cover;
+    background-color: white;
     font-family: cool;
-    color: lavender;
-    font-size: 2rem;
+    color: black;
+    font-size: 4rem;
     box-shadow: lightgray;
 }
 
@@ -127,7 +127,7 @@ section{
     #header{
         font-family: cool;
         font-size: 60px;
-        color: #2E0FA3;
+        color: black;
         letter-spacing: -0.1em;
     }
     
@@ -137,11 +137,8 @@ section{
         height: 240px;
         width: 189px;
         border-radius: 14px;
-        background-image: url(images/Mask-Group.png);
-        background-size: cover;
         font-family: cool;
-        color: lavender;
-        font-size: 2rem;
+        color: black;
         box-shadow: lightgray;
 }
 }
